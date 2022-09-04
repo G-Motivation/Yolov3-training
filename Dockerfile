@@ -1,5 +1,4 @@
 # YOLOv3 🚀 by Ultralytics, GPL-3.0 license
-
 # Start FROM Nvidia PyTorch image https://ngc.nvidia.com/catalog/containers/nvidia:pytorch
 FROM nvcr.io/nvidia/pytorch:21.10-py3
 
@@ -11,7 +10,13 @@ COPY requirements.txt .
 RUN python -m pip install --upgrade pip
 RUN pip uninstall -y nvidia-tensorboard nvidia-tensorboard-plugin-dlprof
 RUN pip install --no-cache -r requirements.txt coremltools onnx gsutil notebook wandb>=0.12.2
-RUN pip install --no-cache -U torch torchvision numpy Pillow
+RUN pip uninstall opencv-python
+RUN pip uninstall opencv-contrib-python
+RUN pip uninstall opencv-contrib-python-headless
+RUN pip install opencv-contrib-python==4.5.5.62
+RUN pip install --no-cache -U numpy Pillow
+#For cuda 11.7 from pytorch offical website
+RUN pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 # RUN pip install --no-cache torch==1.10.0+cu113 torchvision==0.11.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
 
 # Create working directory

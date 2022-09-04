@@ -3,16 +3,15 @@
 # Base ----------------------------------------
 matplotlib>=3.2.2
 numpy>=1.18.5
-opencv-python>=4.1.2
+#opencv-python>=4.1.2
 Pillow>=7.1.2
 PyYAML>=5.3.1
 requests>=2.23.0
 scipy>=1.4.1
 #Use nvidia-smi to find cuda's version and match related pytorch
-torch>=1.11.0
-torchvision>=0.12.0
+#torch>=1.11.0
+#torchvision>=0.12.0
 tqdm>=4.41.0
-python>=3.6
 # Logging -------------------------------------
 tensorboard>=2.4.1
 wandb

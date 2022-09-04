@@ -268,7 +268,8 @@ def train(hyp,  # path/to/hyp.yaml or hyp dictionary
     LOGGER.info(f'Image sizes {imgsz} train, {imgsz} val\n'
                 f'Using {train_loader.num_workers * WORLD_SIZE} dataloader workers\n'
                 f"Logging results to {colorstr('bold', save_dir)}\n"
-                f'Starting training for {epochs} epochs...')
+                f'Starting training for {epochs} epochs...\n'
+                f'Batch size is {batch_size}')
     for epoch in range(start_epoch, epochs):  # epoch ------------------------------------------------------------------
         model.train()
 
