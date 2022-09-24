@@ -1,0 +1,14 @@
+
+
+<annotation>
+  <folder>JPEGImages</folder>
+  <filename>4756</filename>
+  <path>H:\labelImg-master\windows_v1.2.2\data\voc\VOCdevkit\VOC2019\Val\4756.jpg</path>
+  <source>
+    <database>Unknown</database></source>
+  <size>
+    <width>575</width>
+    <height>488</height>
+    <depth>"3"</depth></size>
+  <segmented>0</segmented></annotation>
+
